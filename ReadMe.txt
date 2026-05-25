@@ -2,6 +2,10 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiINmsHvxQUoAFuwYxbRHH9zr
 
 TODO:
+1. Почитать про Длинную арифметику;
+
+
+TODO:
 1. В проекте 'DataTypes' вывести информацию по следующим типам:
 	int,uint,long,ulong;
 	float,double,decimal;
