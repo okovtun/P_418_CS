@@ -48,8 +48,69 @@ namespace Fraction
 			this.Denominator = denominator;
 			Console.WriteLine($"Constructor:\t{GetHashCode()}");
 		}
+		public Fraction(Fraction other)
+		{
+			this.Integer = other.Integer;
+			this.Numerator = other.Numerator;
+			this.Denominator = other.Denominator;
+			Console.WriteLine($"CopyConstructor:\t{GetHashCode()}");
+		}
+
+		//					 Operators:
+		public static Fraction operator *(Fraction l, Fraction r)
+		{
+			Fraction left = new Fraction(l);
+			Fraction right = new Fraction(r);
+			left.ToImproper();
+			right.ToImproper();
+			return new
+				Fraction(left.Numerator * right.Numerator, left.Denominator * right.Denominator)
+				.Reduce()
+				.ToProper();
+		}
+		public static Fraction operator /(Fraction left, Fraction right)
+		{
+			return left * right.Inverted();
+		}
 
 		//					  Methods:
+		Fraction Reduce()
+		{
+			int more = Numerator, less = Denominator;
+			int rest;
+			do
+			{
+				rest = more % less;
+				more = less;
+				less = rest;
+			} while (rest != 0);
+			int GCD = more;
+			Numerator /= GCD;
+			Denominator /= GCD;
+			return this;
+		}
+		Fraction Inverted()
+		{
+			Fraction inverted = new Fraction(this);
+			inverted.ToImproper();
+			//(inverted.Numerator, inverted.Denominator) = (inverted.Denominator, inverted.Numerator);
+			int buffer = inverted.Numerator;
+			inverted.Numerator = inverted.Denominator;
+			inverted.Denominator = buffer;
+			return inverted;
+		}
+		Fraction ToProper()
+		{
+			Integer += Numerator / Denominator;
+			Numerator %= Denominator;
+			return this;
+		}
+		Fraction ToImproper()
+		{
+			Numerator += Integer * Denominator;
+			Integer = 0;
+			return this;
+		}
 		public void Print()
 		{
 			if (Integer != 0) Console.Write(Integer);

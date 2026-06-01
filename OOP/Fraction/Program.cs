@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define CONSTRUCTORS_CHECK
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace Fraction
 	{
 		static void Main(string[] args)
 		{
+
+#if CONSTRUCTORS_CHECK
 			Fraction A = new Fraction();
 			A.Print();
 
@@ -20,7 +23,21 @@ namespace Fraction
 			C.Print();
 
 			Fraction D = new Fraction(2, 3, 4);
-			D.Print();
+			D.Print(); 
+#endif
+
+			Fraction A = new Fraction(2, 3, 4);
+			Fraction B = new Fraction(3, 4, 5);
+			A *= B;
+			A.Print();
+			B.Print();
+
+			A /= B;
+			A.Print();
+			B.Print();
+
+			//Fraction C = A / B;
+			//C.Print();
 		}
 	}
 }
