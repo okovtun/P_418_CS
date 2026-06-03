@@ -24,6 +24,17 @@ namespace Academy
 			Console.WriteLine($"SConstructor:\t{GetHashCode()}"); 
 #endif
 		}
+		public Student
+		(
+			Human human,
+			string speciality,
+			string group, double rating, double attendance
+		) : base(human, speciality)
+		{
+			this.Group = group;
+			this.Rating = rating;
+			this.Attendance = attendance;
+		}
 		~Student()
 		{
 #if DEUBG

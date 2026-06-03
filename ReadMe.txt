@@ -2,6 +2,9 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiINmsHvxQUoAFuwYxbRHH9zr
 
 TODO:
+1. Прислать ссылку на репозиторий 'InheritanceCS';
+
+DONE:
 1. Повторить конструкторы в курсе C++;
 2. Повторить наследование;
 3. В класс 'Fraction' добавить Деструктор;
