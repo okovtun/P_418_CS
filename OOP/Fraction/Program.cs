@@ -38,6 +38,11 @@ namespace Fraction
 
 			//Fraction C = A / B;
 			//C.Print();
+
+			for (Fraction i = new Fraction(1, 2); i.Integer < 10; ++i)
+			{
+				i.Print();
+			}
 		}
 	}
 }
