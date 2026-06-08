@@ -54,5 +54,9 @@ namespace Academy
 				base.ToString() + 
 				$"{Group.PadRight(8)}{Rating.ToString().PadLeft(8)}{Attendance.ToString().PadLeft(8)}";
 		}
+		public override string ToFileString()
+		{
+			return base.ToFileString()+$",{Group},{Rating},{Attendance}";
+		}
 	}
 }

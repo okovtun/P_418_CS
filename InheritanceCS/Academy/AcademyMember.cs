@@ -33,5 +33,9 @@ namespace Academy
 		{
 			return base.ToString() + $"{Speciality.PadRight(22)}";
 		}
+		public override string ToFileString()
+		{
+			return base.ToFileString()+$",{Speciality}";
+		}
 	}
 }
