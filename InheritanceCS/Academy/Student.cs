@@ -24,6 +24,12 @@ namespace Academy
 			Console.WriteLine($"SConstructor:\t{GetHashCode()}"); 
 #endif
 		}
+		public Student(Student other):base(other)
+		{
+			this.Group = other.Group;
+			this.Rating = other.Rating;
+			this.Attendance = other.Attendance;
+		}
 		public Student
 		(
 			Human human,

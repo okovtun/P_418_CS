@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Academy
 {
-	class AcademyMember:Human
+	class AcademyMember : Human
 	{
 		public string Speciality { get; set; }
 		public AcademyMember
@@ -16,6 +16,10 @@ namespace Academy
 		) : base(lastName, firstName, age)
 		{
 			this.Speciality = speciality;
+		}
+		public AcademyMember(AcademyMember other) : base(other)
+		{
+			this.Speciality = other.Speciality;
 		}
 		public AcademyMember(Human human, string speciality) : base(human)
 		{

@@ -29,14 +29,22 @@ namespace Academy
 				"White", "Walter", 50,
 				"Chemistry", 25
 			);
-			Console.WriteLine(teacher); 
+			Console.WriteLine(teacher);
+
+			Graduate graduate = new Graduate("Rosenberg", "Ken", 35, "Law", "Vice", 32, 25, "How to make money");
+			Console.WriteLine(graduate);
 #endif
 
+#if INHERITANCE_PART_2
 			Human human = new Human("Vercetty", "Tommy", 30);
 			Console.WriteLine(human);
 
 			Student student = new Student(human, "Auto", "Vice", 95, 98);
 			Console.WriteLine(student);
+
+			Graduate graduate = new Graduate(student, "How to make mpney");
+			Console.WriteLine(graduate);
+#endif
 		}
 	}
 }
