@@ -12,6 +12,7 @@ namespace Academy
 {
 	class Streamer
 	{
+		//Single responsibility principle
 		public void Print(Human[] group)
 		{
 			for (int i = 0; i < group.Length; i++)
