@@ -2,6 +2,9 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiINmsHvxQUoAFuwYxbRHH9zr
 
 TODO:
+1. В иерархию 'AbstractGeometry' добавить квадрат и круг;
+
+DONE:
 1. Прислать ссылку на репозиторий 'InheritanceCS';
 
 DONE:
