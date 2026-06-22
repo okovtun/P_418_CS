@@ -2,6 +2,10 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiINmsHvxQUoAFuwYxbRHH9zr
 
 TODO:
+1. Диаметр круга должен рисоваться под углом 30 градусов;
+2. В проект Geometry добавить треугольники;
+
+DONE:
 1. В иерархию 'AbstractGeometry' добавить квадрат и круг;
 
 DONE:
