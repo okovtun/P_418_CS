@@ -45,17 +45,19 @@ namespace AbstractGeometry
 			Pen pen = new Pen(Color, LineWidth);
 			e.Graphics.DrawEllipse(pen, StartX, StartY, (float)Radius * 2, (float)Radius * 2);
 			DrawCenter(e);
+			DrawRadius(e);
+			DrawDiameter(e);
 		}
 		void DrawCenter(PaintEventArgs e)
 		{
 			Point center = new Point(StartX + (int)Radius, StartY + (int)Radius);
 			Pen pen = new Pen(Color, 4);
 			e.Graphics.DrawEllipse
-				(
+			(
 				pen,
 				center.X-2, center.Y-2,
 				4, 4
-				);
+			);
 		}
 		public void DrawRadius(PaintEventArgs e)
 		{
@@ -86,8 +88,6 @@ namespace AbstractGeometry
 		{
 			Console.WriteLine($"Радиус: {Radius}");
 			Console.WriteLine($"Диаметр: {GetDiameter()}");
-			DrawRadius(e);
-			DrawDiameter(e);
 			base.Info(e);
 		}
 	}
